@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <style>
+        body,html{
+            color:white;
+            text-align:center;
+        }
+        #app{
+            width: 600px;
+            height: 600px;
+            margin: 10% auto 0;
+            border: 1px solid black;
+            background-color: #566da7;
+        }
+        .title{
+            font-size:45px;
+            font-family:"Minion Pro"
+        }
+        .click{
+            width: 450px;
+            overflow: hidden;
+            margin: 0 auto 15px;
+            background-color: #00c500;
+            padding:15px 35px;
+        }
+        .total{
+            width: 450px;
+            overflow: hidden;
+            margin: 0 auto;
+            padding:15px 35px;
+        }
+        span{
+            font-size: 20px;
+            font-style: oblique;
+        }
+        .onclick{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p class="title">Services</p>
+        <!--<div class="click" :class="{onclick:isBool}" @click="click">-->
+            <!--<span style="float: left">Design</span>-->
+            <!--<span style="float: right">￥400</span>-->
+        <!--</div>-->
+        <div v-for="(arr,index) in JsonObj" :class="[click,{onclick:arr.bool}]" @click="onClick(index)">
+            <span style="float: left">{{arr.name}}</span>
+            <span style="float: right">￥{{arr.money}}</span>
+        </div>
+        <hr>
+        <div class="total">
+            <span style="float: left">Total:</span>
+            <span style="float: right">{{theSum}}</span>
+        </div>
+    </div>
+</body>
+<script>
+
+var JsonObj=[
+    {name:'Web Development',money:'350',bool:false},
+    {name:'Design',money:'300',bool:false},
+    {name:'Integration',money:'250',bool:false},
+    {name:'Training',money:'180',bool:false}
+]
+
+
+var vm = new Vue({
+    el:'#app',
+    data:{
+        JsonObj:JsonObj,
+        theSum:0,
+        click:'click',
+    },
+    methods:{
+        onClick:function (index) {
+            var bool=this.bool=this.JsonObj[index].bool=!this.JsonObj[index].bool;
+            if(bool==true){
+                this.theSum+=(this.JsonObj[index].money)*1
+            }else {
+                this.theSum-=(this.JsonObj[index].money)*1
+            }
+        }
+    }
+})
+
+
+</script>
+</html>
