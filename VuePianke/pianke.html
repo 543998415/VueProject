@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/vue/dist/vue.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        html{
+            height: 100%;
+        }
+        body {
+            width: 100%;
+            background-image: url("images/img/pic38.png");
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+</head>
+<body>
+<div id="All">
+    <!--返回按钮-->
+    <div id="return" v-show="backBool" @click="click"></div>
+    <!--top-->
+    <div id="Top"  v-show="topBool">
+        <ul class="TopLogo">
+            <li class="L1"><a href="#"></a></li>
+            <li class="Hover1" :class="obj.class" v-for="obj in topLogo"><a href="">{{obj.title}}</a></li>
+            <li class="L7"><a href="#"></a></li>
+            <li class="L8" id="login"><a href="#">登录/注册</a></li>
+        </ul>
+    </div>
+    <!--topEnd-->
+    <!--contain-->
+    <div id="Contain">
+        <div class="M_one">
+            <a v-for="obj in M_one" href="#" :id="obj.id" class="Hover2" >
+                <img :src="obj.img" alt="">
+                <div :class="obj.type"></div>
+                <div class="text">{{obj.name}}</div>
+                <div class="mask"></div>
+
+            </a>
+        </div>
+        <div class="M_two">
+            <div class="title">&nbsp&nbspTING</div>
+            <div v-for="obj in M_two" :id="obj.id" class="Hover3" >
+                <a href="#" class="Tbox">
+                    <img :src="obj.img" alt="">
+                    <div class="mask"></div>
+                    <div class="player2"></div>
+                </a>
+                <div class="Bbox">
+                    <a href="###" class="sing">{{obj.sing}}</a><br>
+                    <a href="###" class="edit">主播/{{obj.player}}</a><br>
+                    <span>{{obj.times}}k次播放| 评论：{{obj.review}} | 喜欢：{{obj.likes}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="M_three">
+            <div class="title"> &nbsp&nbspPICTURE</div>
+            <div v-for="obj in M_three" :id="obj.id" class="Hover4">
+                <a href="#" class="NTbox">
+                    <img class="pic-1" :src="obj.img1">
+                    <img class="pic-2" :src="obj.img2">
+                    <img class="pic-3" :src="obj.img3">
+                </a>
+                <div class="Bbox">
+                    <a href="#" class="sing">{{obj.sing}}</a><br>
+                    <a href="#" class="edit">{{obj.edit}}</a>
+                    <a href="#" class="view">{{obj.view}}</a><br>
+                    <div class="line"></div>
+                    <span style="color: black"><b>By /{{obj.By}}</b></span>
+                    <span style="float: right">{{obj.times}}k次阅读  |  评论:{{obj.review}}  |  喜欢:{{obj.likes}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="M_four">
+            <div class="title"> &nbsp&nbspRead</div>
+            <div v-for="obj in M_four" :id="obj.id">
+                <div class="box">
+                    <div class="left">
+                        <a class="sing">{{obj.sing}}</a><br>
+                        <a class="edit">由/{{obj.edit}}</a><br>
+                        <span class="line">_____</span><br>
+                        <span class="book">{{obj.book}}</span>
+                        <a href="#" class="view">{{obj.view}}</a><br>
+                        <div class="bottom">{{obj.times}}k次阅读| 评论：{{obj.review}} | 喜欢：{{obj.likes}}</div>
+                    </div>
+                    <a href="#" class="right">
+                        <img :src="obj.img">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="M_five">
+            <div class="title"> &nbsp&nbspHotPianker</div>
+            <div v-for="obj in M_five" class="box" :id="obj.id">
+                <img class="user" :src="obj.img1">
+                <img :src="obj.img2" class="logo">
+                <a href="#" class="name">{{obj.name}}</a>
+                <span class="information">{{obj.information}}</span>
+            </div>
+        </div>
+        <a href="#" id="more">查看更多精选内容</a>
+    </div>
+    <!--containEnd-->
+    <!--Foot-->
+    <div id="Foot">
+        <div class="box">
+            <img class="Flogo1" src="images/img/pic21.png">
+            <div class="Flogo2">
+                <span v-for="arr in Arr">{{arr}}</span>
+            </div>
+            <a href="#" class="Flogo3"></a>
+            <a href="#" class="Flogo4"></a>
+            <a href="#" class="Flogo5"></a>
+            <a href="#" class="Flogo6"></a>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var back = new Vue({
+        el:'#return',
+        data:{
+            backBool:false
+        },
+        methods: {
+            beBack:function() {
+                this.scroll = document.body.scrollTop;
+                console.log(this.scroll)
+                if(this.scroll>1500){
+                    this.backBool=true;
+                }else {
+                    this.backBool=false;
+                }
+            },
+            click:function () {
+                document.body.scrollTop=0;
+            }
+        },mounted:function () {
+            window.addEventListener('scroll',this.beBack)
+        }
+    })
+    var Top = new Vue({
+        el:'#Top',
+        data:{
+             topLogo: [
+                {title: '首页', class: 'L2'},
+                {title: '阅读', class: 'L3'},
+                {title: '电台', class: 'L4'},
+                {title: '碎片', class: 'L5'},
+                {title: '客户端', class: 'L6'}
+            ],
+            scroll: '',
+            old:0,
+            new:0,
+            topBool:true,
+        },
+        methods: {
+            show:function() {
+                this.scroll = document.body.scrollTop;
+                this.new = this.scroll;
+                if(this.old>this.new){
+                    this.topBool=true;
+                }else {
+                    this.topBool=false;
+                }
+                this.old = this.scroll;
+            }
+        },
+        mounted:function () {
+            window.addEventListener('scroll',this.show)
+        }
+    })
+    var Contain = new Vue({
+        el:'#Contain',
+        data:{
+            M_one:[
+                {
+                    id:'M1',
+                    img:'images/img/pic39.jpg',
+                    type:'player1',
+                    name:'影单,10部好看的泰国小清新'
+                },
+                {
+                    id:'M2',
+                    img:'images/img/pic34.jpg',
+                    type:'player2',
+                    name:'有时我会梦见你'
+                },
+                {
+                    id:'M3',
+                    img:'images/img/pic13.jpg',
+                    type:'player1',
+                    name:'一首歌的时间'
+                },
+                {
+                    id:'M4',
+                    img:'images/img/pic40.jpg',
+                    type:'player1',
+                    name:'一首歌的时间'
+                },
+                {
+                    id:'M5',
+                    img:'images/img/pic2.jpg',
+                    type:'player1',
+                    name:'一首歌的时间'
+                }
+            ],
+            M_two:[
+                {
+                    id:'M6',
+                    img:'images/img/pic41.jpg',
+                    sing:'流夏| 留下吧',
+                    player:'栗先达',
+                    times:'5.5',
+                    review:'9',
+                    likes:'97'
+                },
+                {
+                    id:'M7',
+                    img:'images/img/pic42.jpg',
+                    sing:'不错的人有很多，偏偏...',
+                    player:'小北爱吃肉',
+                    times:'2.9',
+                    review:'1',
+                    likes:'49'
+                },
+                {
+                    id:'M8',
+                    img:'images/img/pic43.jpg',
+                    sing:'用快乐定义民谣',
+                    player:'沙稷清',
+                    times:'0.89',
+                    review:'1',
+                    likes:'5'
+                }
+            ],
+            M_three:[
+                {
+                    id:'M9',
+                    img1:'images/img/pic44.jpg',
+                    img2:'images/img/pic45.jpg',
+                    img3:'images/img/pic46.jpg',
+                    sing:'我用一部胶片机，拍到了花城广州的春天',
+                    edit:'一起来看一看呀~',
+                    view:'VIEW ALL',
+                    By:'麥記意粉',
+                    times:'1.2',
+                    review:'11',
+                    likes:'72'
+                },
+                {
+                    id:'M10',
+                    img1:'images/img/pic47.jpg',
+                    img2:'images/img/pic48.jpg',
+                    img3:'images/img/pic49.jpg',
+                    sing:'像猫一样的姑娘',
+                    edit:'可爱是装不出来的，它是一种天赋',
+                    view:'VIEW ALL',
+                    By:'片刻',
+                    times:'11.5',
+                    review:'29',
+                    likes:'387'
+                }
+            ],
+            M_four:[
+                {
+                    id:'M11',
+                    sing:'你回来的时候',
+                    edit:'闲古锥',
+                    book:'我羡慕那些人/拥有流向世界的闸道/在每一个闲聊的午后/顺着舌尖/将沉重托付出去',
+                    view:'VIEW ALL',
+                    times:'1.5',
+                    review:'4',
+                    likes:'81',
+                    img:'images/img/pic50.jpg'
+                },
+                {
+                    id:'M12',
+                    sing:'请温柔对待孤独Ⅰ读“星星上的人',
+                    edit:'吴汉承',
+                    book:'请把你所有的爱都给他......',
+                    view:'VIEW ALL',
+                    times:'2.4',
+                    review:'6',
+                    likes:'121',
+                    img:'images/img/pic51.jpg'
+                },
+                {
+                    id:'M13',
+                    sing:'心理学中，说服人需要哪几个项黑科技',
+                    edit:'剑圣喵大师',
+                    book:'当我收到卢博消息，说他已经脱离单身时，我发自肺腑感到高兴。卢博士是一位优秀的心理学研究者，科研成果丰富，做事一丝不凝',
+                    view:'VIEW ALL',
+                    times:'2.1',
+                    review:'45',
+                    likes:'167',
+                    img:'images/img/pic52.jpg'
+                }
+            ],
+            M_five:[
+                {
+                    id:'User1',
+                    img1:'images/img/pic53.jpg',
+                    img2:'images/img/pic17.png',
+                    name:'栗先达',
+                    information:'独立音乐人，穷秀才愣头青，山海文艺创始人。',
+                },
+                {
+                    id:'User2',
+                    img1:'images/img/pic36.jpg',
+                    img2:'images/img/pic17.png',
+                    name:'慕斯小普',
+                    information:'音乐人阿力普',
+                },
+                {
+                    id:'User3',
+                    img1:'images/img/pic14.jpg',
+                    img2:'images/img/pic17.png',
+                    name:'音乐人陈敏',
+                    information:'独立唱作人陈敏',
+                },
+                {
+                    id:'User4',
+                    img1:'images/img/pic8.jpg',
+                    img2:'images/img/pic17.png',
+                    name:'马雨阳',
+                    information:'北京摇滚、民谣音乐人马雨阳',
+                }
+            ]
+        }
+    })
+    var Foot = new Vue({
+        el:'#Foot',
+        data:{
+            Arr:[
+                '关于我们',
+                '友情链接',
+                '片刻帮助',
+                '意见反馈',
+                '成长记忆',
+                '版权所有©2016 pianke.me /蜀ICP备12022689号-1'
+            ]
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,609 @@
+/* 第一部分*/
+#return{
+  position: fixed;
+  bottom: 100px;;
+  right: 100px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/img/pic11.png");
+  background-size: 100%;
+  opacity: 0.5;
+  z-index: 1000;
+}
+#Top{
+  width: 100%;
+  position: fixed;
+  top:0;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 200;
+  -webkit-transition: all 3s;
+  -moz-transition: all 3s;
+  -ms-transition: all 3s;
+  -o-transition: all 3s;
+  transition: all 3s;
+}
+.TopLogo{
+  height: 90px;
+  width: 1200px;
+  margin: 0 auto;
+
+}
+.TopLogo li{
+  display: inline-block;
+  list-style: none;
+  float: left;
+}
+.TopLogo li a{
+  display: inline-block;
+}
+.L1{
+  width: 80px;
+  height: 90px;
+}
+.L1 a{
+  width: 80px;
+  height: 37px;
+  background: url("../images/img/pic10.png") no-repeat;
+  background-size: 100%;
+  margin-top: 27px;
+
+}
+.L2{
+  margin-left: 100px;
+}
+.L2 a{
+  width: 80px;
+  height: 90px;
+  line-height: 90px;
+  color: black;
+  text-align: center;
+
+}
+.L3 a{
+  width: 80px;
+  height: 90px;
+  line-height: 90px;
+  color: black;
+  text-align: center;
+}
+.L4 a{
+  width: 80px;
+  height: 90px;
+  line-height: 90px;
+  color: black;
+  text-align: center;
+}
+.L5 a{
+  width: 80px;
+  height: 90px;
+  line-height: 90px;
+  color: black;
+  text-align: center;
+}
+.L6{
+  margin-right: 400px;
+}
+.L6 a{
+  width: 80px;
+  height: 90px;
+  line-height: 90px;
+  color: black;
+  text-align: center;
+}
+.L7{
+  width: 40px;
+  height: 40px;
+  border-radius:100%;
+  background-color: green;
+  margin-top: 25px;
+}
+.L7 a{
+  width: 100%;
+  height: 100%;
+  background: url("../images/img/pic29.png") no-repeat 7px 5px;
+  background-size:70%;
+}
+.L8 a{
+  width: 125px;
+  height: 46px;
+  border: 1px solid green;
+  color: green;
+  border-radius:23px ;
+  text-align: center;
+  line-height: 46px;
+  margin-top: 22px;
+  margin-left: 30px;
+}
+.L8 a:hover{
+  background-color: green;
+  color: white;
+}
+.Hover1:hover{
+  background-color:rgba(0,0,0,0.02);
+}
+/* 第二部分*/
+#Contain{
+  width: 1200px;
+  top:120px;
+  height: 2800px;
+  margin: 90px auto;
+}
+.M_one{
+  width: 960px;
+  height: 480px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.M_one a{
+  display: inline-block;
+}
+.Hover2 .text{
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.2);
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  display: none;
+}
+.Hover2 .mask{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  position: absolute;
+  top:0;
+  left:0;
+  display: none;
+}
+.Hover2 .player1{
+  width: 80px;
+  height: 80px;
+  background-image: url("../images/img/pic30.png");
+  position: absolute;
+  top:200px;
+  left:200px;
+  display: none;
+}
+.Hover2 .player2{
+  width: 80px;
+  height: 80px;
+  background-image: url("../images/img/pic30.png");
+  position: absolute;
+  top:80px;
+  left:80px;
+  display: none;
+}
+
+.Hover2{
+  float: left;
+}
+#M1{
+  width: 480px;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+
+}
+.M_one img{
+  width:100%;
+  height: 100%;
+  transition: all 1s;
+}
+
+
+
+#M2{
+  width: 240px;
+  height: 240px;
+  position: relative;
+  background-color: wheat;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#M3{
+  width: 240px;
+  height: 240px;
+  position: relative;
+  background-color: forestgreen;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#M4{
+  width: 240px;
+  height: 240px;
+  position: relative;
+  background-color: blueviolet;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#M5{
+  width: 240px;
+  height: 240px;
+  position: relative;
+  background-color:greenyellow;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.Hover2:hover div{
+  display: block;
+
+}
+.Hover2:hover img{
+  transform: scale(1.2);
+}
+/*-------------------------*/
+.M_two{
+  width: 960px;
+  height: 500px;
+  margin: 50px auto 0;
+
+}
+.M_two img{
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+}
+
+.M_two .Hover3{
+  display: block;
+  width: 300px;
+  height: 420px;
+  background-color: white;
+}
+.M_two .Tbox{
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.M_two .Bbox{
+  width: 258px;
+  height: 79px;
+  border: 1px darkgray solid;
+  border-top: none;
+  padding: 20px 20px 10px 20px;
+  background-color: white;
+}
+.M_two .sing{
+  font-size: 20px;
+}
+.M_two .edit{
+  font-size: 10px;
+}
+.M_two span{
+  font-size: 10px;
+  color: darkgray;
+}
+.Hover3 .mask{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  position: absolute;
+  top:0;
+  left:0;
+  display: none;
+}
+.Hover3 .player2{
+  width: 80px;
+  height: 80px;
+  background-image: url("../images/img/pic30.png");
+  position: absolute;
+  top:110px;
+  left:110px;
+  display: none;
+}
+.Hover3:hover .player2{
+  display: block;
+}
+.Hover3:hover .mask{
+  display: block;
+}
+.Tbox:hover img{
+  transform: scale(1.2);
+}
+.sing:hover{
+  color: green;
+}
+.edit:hover{
+  color: green;
+}
+#M6,#M7,#M8{
+  float: left;
+}
+#M7,#M8{
+  margin-left: 30px;
+}
+.title{
+  width: 0;
+  height: 20px;
+  background-color: black;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+/*--------------------------------*/
+.M_three{
+  width: 960px;
+  height: 500px;
+  margin: 0 auto;
+}
+.Hover4{
+  width: 475px;
+  height: 390px;
+  float: left;
+  margin-right: 10px;
+}
+#M10{
+  margin-right: 0;
+}
+.Hover4 .NTbox{
+  display: inline-block;
+  width: 475px;
+  height: 200px;
+}
+.Hover4 .pic-1{
+  width: 260px;
+  height: 200px;
+  float: left;
+}
+.Hover4 .pic-2{
+  width:215px ;
+  height: 100px;
+  float: left;
+}
+.Hover4 .pic-3{
+  width:215px ;
+  height: 100px;
+  float: left;
+}
+.M_three .Bbox{
+  width: 433px;
+  height: 160px;
+  border: 1px darkgray solid;
+  border-top: none;
+  padding: 20px 20px 10px 20px;
+  margin-top: -5px;
+}
+.M_three .sing{
+  display: block;
+  font-size: 20px;
+  margin-bottom: -10px;
+}
+
+.M_three .view{
+  display: inline-block;
+  font-size: 10px;
+  color: green;
+  margin-left: 10px;
+  margin-bottom: 60px;
+}
+.M_three span{
+  font-size: 10px;
+  color: darkgray;
+}
+.M_three .line{
+  width: 100%;
+  height: 1px;
+  background-color: darkgray;
+  margin-bottom: 15px;
+}
+.M_four{
+  width: 960px;
+  height: 800px;
+  margin: 0 auto;
+}
+.M_four .box{
+  width: 958px;
+  height: 218px;
+  border: 1px darkgray solid;
+}
+.M_four .left{
+  width: 620px;
+  height: 180px;
+  padding:20px;
+  float: left;
+}
+.M_four .right{
+  display: block;
+  width: 295px;
+  height: 218px;
+  float: right;
+}
+.M_four img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.M_four .a{
+  display: inline-block;
+}
+.M_four .sing{
+  display: block;
+  font-size: 20px;
+  margin-bottom: -10px;
+}
+.M_four .edit{
+  font-size: 10px;
+}
+.M_four .book{
+  font-size: 14px;
+  color: darkgray;
+}
+.M_four .view{
+  font-size: 14px;
+  color: green;
+  margin-left: 10px ;
+}
+.M_four .bottom{
+  margin-top: 50px;
+  font-size: 14px;
+  color: darkgray;
+}
+#M11,#M12{
+  margin-bottom: 10px;
+}
+.M_five{
+  width: 960px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.M_five .box{
+  width: 230px;
+  height: 235px;
+  background-image: url("../images/img/pic27.png");
+  background-size:100% ;
+  position: relative;
+  float: left;
+  margin-right:10px ;
+}
+.M_five .user{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  position: absolute;
+  left:20px ;
+  top:40px;
+}
+.M_five .name{
+  position: absolute;
+  left:120px;
+  top: 50px;
+}
+.M_five .name:hover{
+  color: green;
+}
+.M_five .information{
+  display: inline-block;
+  width: 89px;
+  font-size: 14px;
+  color: darkgray;
+  position: absolute;
+  left: 120px;
+  top: 90px;
+
+}
+.M_five .logo{
+  width:52px ;
+  height: 19px;
+  position: absolute;
+  left:35px;
+  top:140px;
+}
+#more{
+  display: block;
+  text-align: center;
+  line-height: 46px;
+  width: 180px;
+  height: 46px;
+  background-color: rgba(0,255,100,0.7);
+  border-radius: 23px;
+  color: white;
+  margin: 0 auto;
+}
+#more:hover{
+  background-color: rgba(0,255,100,1);
+
+}
+#Foot{
+  width: 100%;
+  height: 85px;
+  background-color: black;
+  top:3000px;
+  padding-top: 35px;
+
+}
+#Foot .box{
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+}
+#Foot .Flogo1{
+  width: 100px;
+  height: 50px;
+  float: left;
+}
+#Foot .Flogo2{
+  width: 340px;
+  height: 50px;
+  float: left;
+  margin-left: 20px;
+}
+#Foot .Flogo2 span{
+  display: inline-block;
+  margin: 5px 5px;
+  color: darkgray;
+  font-size: 12px;
+}
+.Flogo3,.Flogo4,.Flogo5{
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  float: left;
+  margin-right: 20px;
+}
+.Flogo3{
+  background-image: url("../images/img/pic54.png");
+  margin-left: 400px;
+  background-size: 70%;
+  border: 1px darkgray solid;
+  background-repeat:no-repeat ;
+  background-position:8px 8px ;
+}
+.Flogo4{
+  background-image: url("../images/img/pic19.png");
+  background-size: 103%;
+  background-repeat:no-repeat ;
+}
+.Flogo5{
+  background-image: url("../images/img/pic28.png");
+  background-size: 103%;
+  background-repeat:no-repeat ;
+}
+.Flogo6{
+  display: block;
+  width: 88px;
+  height: 44px;
+  float: left;
+  background-image: url("../images/img/pic20.png");
+  background-size: 103%;
+  background-repeat:no-repeat ;
+}
+
+/*-----------------------------------*/
+#meng{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.7);
+  position: absolute;
+  display: none;
+}
+#All{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+}
+#login_box{
+  width: 500px;
+  height: 700px;
+  margin: 100px auto;
+  background-image: url("../images/img/login-bg.png");
+  background-size: 100%;
+}
+#bt1{
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+}
+#bt2{
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+}
